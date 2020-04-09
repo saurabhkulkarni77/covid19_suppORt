@@ -12,15 +12,13 @@ Instructions to run:
 
 Change directory to current folder open terminal and type:
 
-'''
+
 pip install -r requirements.txt
 
 python3 manage.py runserver
 
-'''
----
+
+
 Go to your browser and open
 
 http://127.0.0.1:8000/
-
----
