@@ -10,8 +10,3 @@ class NameForm(forms.ModelForm):
     class Meta:
     	model = Post
     	fields = ('your_name','email','phone_number','order_size','delivery_time','Dietary_Restrictions')
-# class NameForm(forms.ModelForm):
-#     your_name =forms.CharField(label='Your name', max_length=1000)
-#     class Meta:
-#     	model = Post
-#     	fields = ('your_name',)

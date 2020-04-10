@@ -20,3 +20,9 @@ def user_order_page(request):
         form = NameForm()
 
     return render(request, 'userpagetemp.html', {'form': form})
+
+
+def kitchen_page(request):
+	posts = Post.objects.all()
+	args = {'posts':posts}
+	return render(request,'kitchen.html',args) 

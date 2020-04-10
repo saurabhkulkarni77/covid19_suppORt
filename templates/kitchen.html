@@ -1,0 +1,8 @@
+
+{% csrf_token %}
+{% for post in posts %}
+{{ post.your_name }}</br>
+{{ post.email }}</br>
+<hr>
+{% endfor %}
+
