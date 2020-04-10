@@ -37,7 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'covid_suppORt'
+    'covid_suppORt',
+    'phone_field'
 ]
 
 MIDDLEWARE = [
