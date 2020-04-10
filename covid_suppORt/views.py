@@ -13,7 +13,7 @@ def user_order_page(request):
         # check whether it's valid:
         if form.is_valid():
         	form.save()
-        return HttpResponse('<h1>Thanks!!</h1>')
+        return HttpResponseRedirect('thanks/')
 
     # if a GET (or any other method) we'll create a blank form
     else:
@@ -21,6 +21,8 @@ def user_order_page(request):
 
     return render(request, 'userpagetemp.html', {'form': form})
 
+def thanks(request):
+    return HttpResponse("<h1>Thanks</h1>")
 
 def kitchen_page(request):
 	posts = Post.objects.all()
