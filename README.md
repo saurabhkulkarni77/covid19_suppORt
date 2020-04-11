@@ -1,7 +1,7 @@
 # covid19_suppORt
 ---
 # TO DO 
-1) Make user data fetched on kithcen page in realtime
+1) Add confirm button in kitchen page
 ---
 
 Page fields:
