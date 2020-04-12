@@ -1,0 +1,20 @@
+<h3>Orders</h3>
+
+{% for task in tasks %}
+	<div>
+
+		<p>{{ task.your_name }}</p>
+		<p>{{ task.email }}</p>
+		<p> {{ task.phone_number }}</p>
+		<p>{{ task.order_size }}</p>
+		<p>{{ task.delivery_time }}</p>
+		<p>{{ task.Dietary_Restrictions }}</p> 
+	</div>
+	<form method="post">
+    	{% csrf_token %}
+    	{{ form.complete }}
+    	<h10>Completed</h10><input type="checkbox" value="completed">
+	</form>
+		<a href = "{% url 'delete' task.id %}">Delete Order</a>	
+	<hr>
+{% endfor %}
