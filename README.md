@@ -1,3 +1,4 @@
 # covid19_suppORt
 ## TO DO
-Make kithcn page dynamic
+Make kitchen page orders load without refreshing
+
