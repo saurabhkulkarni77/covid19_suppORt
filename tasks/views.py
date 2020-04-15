@@ -40,7 +40,7 @@ def deleteTask(request,pk):
 def confirmTask(request,pk):
 	item = Task.objects.get(id=pk)
 	if request.method =='POST':
-		item.save(using='analyticsdb')
+		#item.save(using='analyticsdb')
 		Taskone.objects.create(your_name = item.your_name,email=item.email,phone_number=item.phone_number,order_size=item.order_size,delivery_time=item.delivery_time,Dietary_Restrictions=item.Dietary_Restrictions)
 		return redirect('kitchen')
 	context={'item':item}
