@@ -28,7 +28,7 @@ class NameForm(forms.ModelForm):
     	)
     delivery_time = forms.ChoiceField(widget = forms.Select(),label = 'Pickup Time',initial='Please Select Timeslot',choices=time_choice)
     Dietary_Restrictions = forms.CharField(label='Dietary Restrictions', max_length=1000)
-    
+    Delivery_Address = forms.CharField(label='Delivery Address (If Necessary)', max_length=100000)
     def __init__(self, *args, **kwargs):
     	super().__init__(*args,**kwargs)
     	self.helper = FormHelper
@@ -41,6 +41,7 @@ class NameForm(forms.ModelForm):
     		'order_size',
     		'delivery_time',
     		'Dietary_Restrictions',
+    		'Delivery_Address',
     		Submit('submit','Submit',css_class='btn-success')
     		)
 
