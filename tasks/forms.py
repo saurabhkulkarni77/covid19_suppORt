@@ -3,7 +3,7 @@ from .models import *
 class NameForm(forms.ModelForm):
     your_name =forms.CharField(label='Your Name', max_length=1000)
     email     = forms.EmailField(label="Enter Email")
-    phone_number = forms.CharField(max_length=12)
+    phone_number = forms.CharField(max_length=12,label="Phone Number")
     order_size = forms.CharField(label='Number of People (Order Size)', max_length=1000)
     time_choice = (
     	('Please Select Time Slot','Please Select Time Slot'),
