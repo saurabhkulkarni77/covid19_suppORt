@@ -1,5 +1,8 @@
 from django import forms
 from .models import *
+from crispy_forms.helper import FormHelper
+from crispy_forms.layout import Layout, Submit
+
 class NameForm(forms.ModelForm):
     your_name =forms.CharField(label='Your Name', max_length=1000)
     email     = forms.EmailField(label="Enter Email")
@@ -25,6 +28,22 @@ class NameForm(forms.ModelForm):
     	)
     delivery_time = forms.ChoiceField(widget = forms.Select(),label = 'Pickup Time',initial='Please Select Timeslot',choices=time_choice)
     Dietary_Restrictions = forms.CharField(label='Dietary Restrictions', max_length=1000)
+    
+    def __init__(self, *args, **kwargs):
+    	super().__init__(*args,**kwargs)
+    	self.helper = FormHelper
+    	self.helper.form_method = 'Post'
+
+    	self.helper.layout = Layout(
+    		'your_name',
+    		'email',
+    		'phone_number',
+    		'order_size',
+    		'delivery_time',
+    		'Dietary_Restrictions',
+    		Submit('submit','Submit',css_class='btn-success')
+    		)
+
     class Meta:
     	model = Task
     	fields = ('your_name','email','phone_number','order_size','delivery_time','Dietary_Restrictions')
