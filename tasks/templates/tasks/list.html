@@ -12,6 +12,7 @@
 		<p>{{ task.Delivery_Address }}</p> 
 	</div>	
 
-		<a href = "{% url 'delete' task.id %}">Confirm Order</a>	
+		<a href = "{% url 'delete' task.id %}">Confirm Order</a>
+		<a href = "{% url 'confirm' task.id %}">Delete Order</a>	
 	<hr>
 {% endfor %}
