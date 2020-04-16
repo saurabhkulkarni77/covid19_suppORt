@@ -30,6 +30,13 @@ ALLOWED_HOSTS = ['*']
 
 # Application definition
 
+#EMAIL_BACKEND = "django.core.mail.backends.smtp"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "kababandcurryfreefood@gmail.com"
+#EMAIL_HOST_PASSWORD = "cgnniojugqjlecsu"
+EMAIL_HOST_PASSWORD = "rinslsgcssqxwgje"
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',

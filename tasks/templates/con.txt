@@ -1,0 +1,8 @@
+Order Details:
+{{ contact_name }}
+{{ contact_email }}
+{{ contact_phone }}
+{{ contact_order_size }}
+{{ delivery_time }}
+{{ Dietary_Restrictions }}
+{{ Delivery_Address }}
