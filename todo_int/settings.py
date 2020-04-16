@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '#ot@)khi3^ms($5fc$54$3cgq&ko#p^&pr-+c!_b3j1_0_gjc^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -35,7 +35,6 @@ EMAIL_HOST = "smtp.gmail.com"
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
 EMAIL_HOST_USER = "kababandcurryfreefood@gmail.com"
-#EMAIL_HOST_PASSWORD = "cgnniojugqjlecsu"
 EMAIL_HOST_PASSWORD = "rinslsgcssqxwgje"
 INSTALLED_APPS = [
     'django.contrib.admin',
