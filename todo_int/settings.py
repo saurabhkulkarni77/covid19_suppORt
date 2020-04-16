@@ -79,12 +79,13 @@ WSGI_APPLICATION = 'todo_int.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dbprod',
+        'NAME': 'ec2db',
         'USER':'postgres',
         'PASSWORD':'Qwerty12345#',
-        'HOST':'database-1.cwcynifibofr.us-east-1.rds.amazonaws.com',
+        'HOST':'localhost',
         'PORT':'5432',
     }
+
 }
 
 
