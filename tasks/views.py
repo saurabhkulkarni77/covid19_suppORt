@@ -48,8 +48,8 @@ def user_order_page(request):
         	}
         	template = get_template('con.txt')
         	#print(contact_name)
-        	subject = 'Thank you for submitting order'
-        	message = 'it  means a world to us'
+        	subject = 'Your order is ready!!'
+        	message = 'Your order is ready!!'
         	email_from = settings.EMAIL_HOST_USER
         	to = request.POST['email']
         	recipient_list = [to]
