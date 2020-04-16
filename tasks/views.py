@@ -59,7 +59,6 @@ def user_order_page(request):
 			recipient_list = [to]
 			content = template.render(context)
 			email = EmailMessage(subject, content, email_from, recipient_list)
-			email.attach_file('Media/logo.png')
 			email.send()
 		return HttpResponseRedirect('thanks/')
 
@@ -94,7 +93,6 @@ def deleteTask(request,pk):
 		template = get_template('kitchen.txt')
 		content = template.render(context)
 		email = EmailMessage(subject, content, email_from, recipient_list)
-		email.attach_file('Media/logo.png')
 		email.send()
 		return redirect('kitchen')
 	context={'item':item}
