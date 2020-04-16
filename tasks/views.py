@@ -32,16 +32,18 @@ def index(request):
 def deleteTask(request,pk):
 	item = Task.objects.get(id=pk)
 	if request.method =='POST':
+		Taskone.objects.create(your_name = item.your_name,email=item.email,phone_number=item.phone_number,order_size=item.order_size,delivery_time=item.delivery_time,Dietary_Restrictions=item.Dietary_Restrictions,Delivery_Address=item.Delivery_Address)
 		item.delete()
 		return redirect('kitchen')
 	context={'item':item}
 	return render(request,'tasks/delete.html',context)
 
-def confirmTask(request,pk):
-	item = Task.objects.get(id=pk)
-	if request.method =='POST':
-		item.save(using='analyticsdb')
-		Taskone.objects.create(your_name = item.your_name,email=item.email,phone_number=item.phone_number,order_size=item.order_size,delivery_time=item.delivery_time,Dietary_Restrictions=item.Dietary_Restrictions)
-		return redirect('kitchen')
-	context={'item':item}
-	return render(request,'tasks/confirm.html',context)
+# def confirmTask(request,pk):
+# 	item = Task.objects.get(id=pk)
+# 	if request.method =='POST':
+# 		item.save(using='analyticsdb')
+# 		Taskone.objects.create(your_name = item.your_name,email=item.email,phone_number=item.phone_number,order_size=item.order_size,delivery_time=item.delivery_time,Dietary_Restrictions=item.Dietary_Restrictions)
+# 		item
+# 		return redirect('kitchen')
+# 	context={'item':item}
+# 	return render(request,'tasks/confirm.html',context)

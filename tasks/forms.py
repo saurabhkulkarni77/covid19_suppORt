@@ -47,4 +47,4 @@ class NameForm(forms.ModelForm):
 
     class Meta:
     	model = Task
-    	fields = ('your_name','email','phone_number','order_size','delivery_time','Dietary_Restrictions')
+    	fields = ('your_name','email','phone_number','order_size','delivery_time','Dietary_Restrictions','Delivery_Address')

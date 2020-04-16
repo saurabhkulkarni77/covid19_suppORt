@@ -8,10 +8,10 @@
 		<p> {{ task.phone_number }}</p>
 		<p>{{ task.order_size }}</p>
 		<p>{{ task.delivery_time }}</p>
-		<p>{{ task.Dietary_Restrictions }}</p> 
-	</div>
-    	<a href = "{% url 'confirm' task.id %}">Confirm Order</a>	
+		<p>{{ task.Dietary_Restrictions }}</p>
+		<p>{{ task.Delivery_Address }}</p> 
+	</div>	
 
-		<a href = "{% url 'delete' task.id %}">Delete Order</a>	
+		<a href = "{% url 'delete' task.id %}">Confirm Order</a>	
 	<hr>
 {% endfor %}
