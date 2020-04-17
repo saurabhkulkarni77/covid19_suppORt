@@ -1,0 +1,16 @@
+Dear {{ contact_name }},
+Please review you order information and contact us at (716) 565-3822 if there are any mistakes:
+- Phone number: {{ contact_phone }}
+- Number of People Dining: {{ contact_order_size }}
+- Pickup Time: {{ delivery_time }}
+- Dietary Restrictions: {{ Dietary_Restrictions }}
+- Type of Order: {{ contact_order_type }}
+- Address (if delivery): {{ Delivery_Address }}
+
+Thank you again for your order. Feel free to contact us with any questions. 
+
+Best, 
+
+Kabab & Curry Team 
+8445 Main Street, Williamsville, NY, 14221
+(716) 565-3822

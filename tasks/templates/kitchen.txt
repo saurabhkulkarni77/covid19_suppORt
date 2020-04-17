@@ -1,0 +1,11 @@
+Dear {{ contact_name }}, 
+
+Great news! The kitchen has just completed your order! If your order was for pick-up, it will be outside waiting for you in the next 10 minutes. If it was for delivery, it is on its way right now! 
+
+We hope you order again soon. 
+
+Best, 
+
+Kabab & Curry Team
+8445 Main Street, Williamsville, NY, 14221
+(716) 565-3822
