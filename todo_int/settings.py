@@ -85,10 +85,10 @@ WSGI_APPLICATION = 'todo_int.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'demo1',
+        'NAME': 'livedb',
         'USER':'django_aws',
         'PASSWORD':'Qwerty12345#',
-        'HOST':'database-2.cwcynifibofr.us-east-1.rds.amazonaws.com',
+        'HOST':'livedbinstance.cee2eeezk84r.us-east-1.rds.amazonaws.com',
         'PORT':'5432' 
     }
 }
