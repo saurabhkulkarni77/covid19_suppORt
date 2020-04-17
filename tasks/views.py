@@ -82,12 +82,11 @@ def deleteTask(request,pk):
 	if request.method =='POST':
 		to = item.email
 		customer_name = item.your_name 
-		Taskone.objects.create(your_name = item.your_name,email=item.email,phone_number=item.phone_number,order_size=item.order_size,delivery_time=item.delivery_time,Dietary_Restrictions=item.Dietary_Restrictions,Delivery_Address=item.Delivery_Address)
+		Taskone.objects.create(your_name = item.your_name,email=item.email,phone_number=item.phone_number,order_size=item.order_size,delivery_time=item.delivery_time,Dietary_Restrictions=item.Dietary_Restrictions,Delivery_Address=item.Delivery_Address,order_choice=item.order_choice)
 		item.delete()
 		subject = '<DO NOT REPLY>: Kabab & Curry Order Ready'
 		context = {
 			'contact_name': customer_name}
-		message = 'it  means a world to us'
 		email_from = settings.EMAIL_HOST_USER
 		recipient_list = [to]
 		template = get_template('kitchen.txt')
