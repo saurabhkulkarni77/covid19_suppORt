@@ -73,7 +73,7 @@ def thanks(request):
 	return render(request,'tasks/thanks.html')
 
 def index(request):
-	tasks = Task.objects.all()
+	tasks = Task.objects.all().order_by('delivery_time')
 	context = {'tasks': tasks}
 	return render(request,'tasks/list.html',context)
 
@@ -82,7 +82,6 @@ def deleteTask(request,pk):
 	if request.method =='POST':
 		to = item.email
 		customer_name = item.your_name 
-		print(item.created)
 		Taskone.objects.create(your_name = item.your_name,email=item.email,phone_number=item.phone_number,order_size=item.order_size,delivery_time=item.delivery_time,Dietary_Restrictions=item.Dietary_Restrictions,Delivery_Address=item.Delivery_Address,order_choice=item.order_choice,created=item.created)
 		item.delete()
 		subject = '<DO NOT REPLY>: Kabab & Curry Order Ready'

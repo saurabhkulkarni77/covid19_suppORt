@@ -24,7 +24,7 @@ SECRET_KEY = '#ot@)khi3^ms($5fc$54$3cgq&ko#p^&pr-+c!_b3j1_0_gjc^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -83,16 +83,27 @@ WSGI_APPLICATION = 'todo_int.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'livedb',
+#         'USER':'django_aws',
+#         'PASSWORD':'Qwerty12345#',
+#         'HOST':'livedbinstance.cee2eeezk84r.us-east-1.rds.amazonaws.com',
+#         'PORT':'5432' 
+#     }
+# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'livedb',
+        'NAME': 'demo1',
         'USER':'django_aws',
         'PASSWORD':'Qwerty12345#',
-        'HOST':'livedbinstance.cee2eeezk84r.us-east-1.rds.amazonaws.com',
+        'HOST':'database-2.cwcynifibofr.us-east-1.rds.amazonaws.com',
         'PORT':'5432' 
     }
 }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
