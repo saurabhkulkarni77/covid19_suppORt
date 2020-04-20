@@ -93,16 +93,7 @@ DATABASES = {
         'PORT':'5432' 
     }
 }
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'demo1',
-#         'USER':'django_aws',
-#         'PASSWORD':'Qwerty12345#',
-#         'HOST':'database-2.cwcynifibofr.us-east-1.rds.amazonaws.com',
-#         'PORT':'5432' 
-#     }
-# }
+
 
 
 # Password validation
