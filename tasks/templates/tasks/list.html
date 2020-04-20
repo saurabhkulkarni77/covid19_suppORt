@@ -1,8 +1,7 @@
 <html>
 <head>
 <title>Orders</title>
-<h3>Orders</h3>
-
+<h2><centre>Orders</centre></h2>
 <script type = "text/javascript">
 function loadref(time)
 {
@@ -10,23 +9,38 @@ setTimeout("location.reload(true);",time)
 }
 </script>
 </head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<table class="table table-hover table-dark">
+<thead>
+<tr>
+<th scope= 'col'>Name</th>
+<th scope="col">Email</th>
+<th scope="col">Phone Number</th>
+<th scope="col">Number of People (Order Size)</th>
+<th scope="col">Order Choice</th>
+<th scope="col">Delivery time</th>
+<th scope="col">Dietary Restrictions</th>
+<th scope="col">Delivery Address</th>
+<th scope="col">Confirm</th>
+<th scope="col">Delete</th>
+</tr>
 <body onload="javascript:loadref(5000)">
 {% for task in tasks %}
-	<div>
-
-		<p>{{ task.your_name }}</p>
-		<p>{{ task.email }}</p>
-		<p> {{ task.phone_number }}</p>
-		<p>{{ task.order_size }}</p>
-		<p>{{ task.order_choice }}</p>
-		<p>{{ task.delivery_time }}</p>
-		<p>{{ task.Dietary_Restrictions }}</p>
-		<p>{{ task.Delivery_Address }}</p> 
-	</div>	
-
-		<a href = "{% url 'delete' task.id %}">Confirm Order</a>
-		<a href = "{% url 'confirm' task.id %}">Delete Order</a>	
-	<hr>
+<tbody>
+<tr>
+<td scope="row">{{ task.your_name }}</td>
+<td>{{ task.email }}</td>
+<td> {{ task.phone_number }}</td>
+<td>{{ task.order_size }}</td>
+<td>{{ task.order_choice }}</td>
+<td>{{ task.delivery_time }}</td>
+<td>{{ task.Dietary_Restrictions }}</td>
+<td>{{ task.Delivery_Address }}</td>
+<td><a href = "{% url 'delete' task.id %}"class="btn btn-success" role="button">Confirm Order</a></td>
+<td><a href = "{% url 'confirm' task.id %}" class="btn btn-danger" role="button">Delete Order</a></td>
+</tr>
+<tbody>
 {% endfor %}
+</table>
 </body>
 </html>
