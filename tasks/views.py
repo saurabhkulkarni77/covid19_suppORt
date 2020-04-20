@@ -82,7 +82,8 @@ def deleteTask(request,pk):
 	if request.method =='POST':
 		to = item.email
 		customer_name = item.your_name 
-		Taskone.objects.create(your_name = item.your_name,email=item.email,phone_number=item.phone_number,order_size=item.order_size,delivery_time=item.delivery_time,Dietary_Restrictions=item.Dietary_Restrictions,Delivery_Address=item.Delivery_Address,order_choice=item.order_choice)
+		print(item.created)
+		Taskone.objects.create(your_name = item.your_name,email=item.email,phone_number=item.phone_number,order_size=item.order_size,delivery_time=item.delivery_time,Dietary_Restrictions=item.Dietary_Restrictions,Delivery_Address=item.Delivery_Address,order_choice=item.order_choice,created=item.created)
 		item.delete()
 		subject = '<DO NOT REPLY>: Kabab & Curry Order Ready'
 		context = {

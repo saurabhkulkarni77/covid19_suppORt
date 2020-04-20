@@ -23,7 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '#ot@)khi3^ms($5fc$54$3cgq&ko#p^&pr-+c!_b3j1_0_gjc^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+
+#DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -92,7 +94,6 @@ DATABASES = {
         'PORT':'5432' 
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators

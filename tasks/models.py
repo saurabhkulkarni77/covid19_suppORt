@@ -65,4 +65,4 @@ class Taskone(models.Model):
 	delivery_time = models.CharField(default='take your time',max_length=1000,choices=time_choice)
 	Dietary_Restrictions = models.CharField(max_length=1000,default='As per menu')
 	Delivery_Address = models.CharField(default='Not Necessary', max_length=100000)
-	created = models.DateTimeField(auto_now_add=True)
+	created = models.DateTimeField(auto_now_add=False)
