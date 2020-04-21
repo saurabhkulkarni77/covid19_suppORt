@@ -19,6 +19,7 @@ setTimeout("location.reload(true);",time)
 <th scope="col">Number of People (Order Size)</th>
 <th scope="col">Order Choice</th>
 <th scope="col">Delivery time</th>
+<th scope="col">Date and Time When Customer Placed The Order</th>
 <th scope="col">Dietary Restrictions</th>
 <th scope="col">Delivery Address</th>
 <th scope="col">Confirm</th>
@@ -34,6 +35,7 @@ setTimeout("location.reload(true);",time)
 <td>{{ task.order_size }}</td>
 <td>{{ task.order_choice }}</td>
 <td>{{ task.delivery_time }}</td>
+<td>{{ task.created }}</td>
 <td>{{ task.Dietary_Restrictions }}</td>
 <td>{{ task.Delivery_Address }}</td>
 <td><a href = "{% url 'delete' task.id %}"class="btn btn-success" role="button">Confirm Order</a></td>

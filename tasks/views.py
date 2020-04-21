@@ -6,6 +6,7 @@ from django.core.mail import send_mail
 from django.conf import settings
 from django.template.loader import get_template
 from django.core.mail import EmailMessage
+from datetime import datetime
 # Create your views here.
 
 def user_order_page(request):
